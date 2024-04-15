@@ -9,6 +9,17 @@ public class hashmapping {
         examScores.put("Science",85);
         examScores.put("English",95);
         System.out.println(examScores.toString());
+//        to display a particular set of key and value
+        System.out.println(examScores.get("Maths"));
+
+        examScores.putIfAbsent("IP",96);
+        System.out.println(examScores.size());
+        System.out.println(examScores.getOrDefault("Punjabi",-1));
+        examScores.replace("Maths",80);
+        examScores.forEach((subject ,score) ->{
+            examScores.replace(subject, score-10);
+        });
+        System.out.println(examScores.toString());
 
     }
 }
